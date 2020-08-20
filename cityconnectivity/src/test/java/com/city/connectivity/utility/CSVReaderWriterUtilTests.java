@@ -24,7 +24,7 @@ public class CSVReaderWriterUtilTests {
 	@Before
 	public void setUp() throws Exception {
 		// Assumption that the file is stored at below location
-		fileName = "src/test/resources/city.csv"; 
+		fileName = "src/test/resources/city.txt"; 
 	}
 	
 	@Test

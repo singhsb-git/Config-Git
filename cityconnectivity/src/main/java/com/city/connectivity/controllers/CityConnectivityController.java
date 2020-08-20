@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.city.connectivity.service.DataService;
 
+import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
@@ -24,6 +25,7 @@ import io.swagger.annotations.ApiResponses;
  */
 @RestController
 @RequestMapping("/connected")
+@Api(value="CityConnectivityController", description = "REST Apis related to CityConnectivityController")
 public class CityConnectivityController {
 	
 	private final Logger logger = LoggerFactory.getLogger(this.getClass());
