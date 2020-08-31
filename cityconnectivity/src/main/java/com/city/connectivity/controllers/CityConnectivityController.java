@@ -5,6 +5,8 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -39,9 +41,9 @@ public class CityConnectivityController {
 	
 	@ApiOperation(value = "Check if cities are connected")
 	@ApiResponses({ @ApiResponse(code = 200, message = "", response = String.class) })
-	@GetMapping(consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
+	@GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
 	public String getCityConnection(@RequestParam("origin") String origin,	@RequestParam("destination") String destination) {
-		logger.info("inside - checking if cities are connected.");
+		logger.info("inside - checking if cities are connected...");
 		boolean result = false;
 		
 		try {
